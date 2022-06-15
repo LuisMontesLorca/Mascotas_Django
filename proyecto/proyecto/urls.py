@@ -20,5 +20,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.inicio),
-    path('',views.historial)
+    path('holi/',views.historial),
+    path('producto/',views.productos)
+
+    
 ]
