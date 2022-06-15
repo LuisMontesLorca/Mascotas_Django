@@ -1,0 +1,19 @@
+.carousel-item img{
+    height: 80vh;
+}
+
+.embellecedortexto{
+    padding: 40px;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+.logo{
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #677481;
+}
+.text-logo{
+    color:#ffff;
+    padding-left: 10px;
+    white-space: pre-line;
+}
