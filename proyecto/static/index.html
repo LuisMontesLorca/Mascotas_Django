@@ -22,26 +22,26 @@
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                     <div class="mx-auto order-0">
                         <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}">Home <spanavn class="sr-only"></span></a>
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link" href="{% static 'Productos.html' %}">Productos</a>
+                                <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link" href="seguimiento.html">Seguimiento</a>
+                                <a class="nav-link" href="{% url 'Seguimiento' %}">Seguimiento</a>
                                 </li>                    
                                 <li class="nav-item">
-                                <a class="nav-link" href="historial.html">Historial</a>
+                                <a class="nav-link" href="{% url 'Historial' %}">Historial</a>
                                 </li>
                             </ul>
                     </div>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="{% url 'Login' %}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Register.html">Registro</a>
+                            <a class="nav-link" href="{% url 'Register' %}">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -75,7 +75,7 @@
      </div> 
     
       <div class="container embellecedortexto">
-        <p>Tienda de animales PETHAPPY, una tienda que trabaja para organización sin fines de lucro, una gran gama de juguetes y accesorios para su mascota, dele un grato momento a sus regalones, variedades en vestimentas, disfraces, su regalón puede ser su rey.</p>
+        <p>Tienda de animales PETHAPPY, una tienda que trabaja para organizaci&oacute;n sin fines de lucro, una gran gama de juguetes y accesorios para su mascota, dele un grato momento a sus regalones, variedades en vestimentas, disfraces, su regal&oacute;n puede ser su rey.</p>
       </div>
         <script src="{% static 'https://code.jquery.com/jquery-3.2.1.slim.min.js' %}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

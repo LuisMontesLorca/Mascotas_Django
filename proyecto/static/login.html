@@ -22,16 +22,16 @@
                     <div class="mx-auto order-0">
                         <ul class="navbar-nav ml-auto">
                                 <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                                 </li>                           
                             </ul>
                     </div>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="{% url 'Login' %}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Register.html">Register</a>
+                            <a class="nav-link" href="{% url 'Register' %}">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -42,12 +42,12 @@
 <div class="container">
   <form>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Dirección Email</label>
+      <label for="exampleInputEmail1" class="form-label">Direcci&oacute;n Email</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-      <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+      <div id="emailHelp" class="form-text">Nunca compartiremos su correo electr&oacute;nico con nadie m&aacute;s.</div>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <label for="exampleInputPassword1" class="form-label">Contrase&ntilde;a</label>
       <input type="password" class="form-control" id="exampleInputPassword1" required minlength="6">
     </div>
 
@@ -58,7 +58,7 @@
     
       <div class="container embellecedortexto">
         <p>
-          Ingrese sus datos para acceder a nuestra página de mascotas
+          Ingrese sus datos para acceder a nuestra p&aacute;gina de mascotas
           </p>
       </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -67,7 +67,7 @@
 </body> 
 <footer class="text-center text-lg-start bg-light text-muted">
      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-             <span>Guarde su contraseña y NO la comparta</span>
+             <span>Guarde su contrase&ntilde;a y NO la comparta</span>
      </section>
 </footer>    
 

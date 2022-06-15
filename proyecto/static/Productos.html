@@ -21,18 +21,18 @@
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <div class="mx-auto order-0">
             <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="Productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="Seguimiento.html">Seguimiento</a>
-                    </li>                    
-                    <li class="nav-item">
-                    <a class="nav-link" href="Historial.html">Historial</a>
-                    </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home <spanavn class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'Seguimiento' %}">Seguimiento</a>
+                </li>                    
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'Historial' %}">Historial</a>
+                </li>
                 </ul>             
     </div>
   </nav>
