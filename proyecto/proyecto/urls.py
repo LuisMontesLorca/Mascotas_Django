@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.inicio),
-    path('holi/',views.historial),
-    path('producto/',views.productos)
-
-    
+    path('historial/',views.historial, name= "historial"),
+    path('productos/',views.productos, name= "productos"),
+    path('login/',views.login, name= "login"),
+    path('register/',views.Register, name= "Register"),
+    path('seguimiento/',views.Seguimiento, name= "Seguimiento")
 ]
+
