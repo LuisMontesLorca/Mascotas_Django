@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +39,16 @@
 
   
   <div class="container">
+    <h1> {{ nombre }} </h1>
+    {% for elemento in lista%}
+
+      {% if elemento == "elemento2" %}
+      <h1> no quiero mostrar el elemento 2</h1>
+      {% else %}
+      <h1>{{elemento}}</h1>
+      {% endif %}
+      
+    {% endfor %}
     <div id="productos" class="row">
 
     </div>
