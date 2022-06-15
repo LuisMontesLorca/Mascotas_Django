@@ -8,3 +8,11 @@ def inicio(request):
     ctx = Context()
     documento = plt.render(ctx)
     return HttpResponse(documento)
+
+def historial(request):
+    doc_externo =open("static/historial.html")
+    plt = Template(doc_externo.read())
+    doc_externo.close()
+    ctx = Context()
+    documento = plt.render(ctx)
+    return HttpResponse(documento)
