@@ -1,49 +1,25 @@
 from django.http import HttpResponse
 from django.template import Template, Context
+from django.shortcuts import render
 
 def inicio(request):
-    doc_externo =open("static/index.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context()
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+    return render(request,"index.html")
 
 def historial(request):
-    doc_externo =open("static/historial.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context()
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+    return render(request,"historial.html") 
 
 def productos(request):
-    doc_externo =open("static/Productos.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context({"nombre": "luis", "lista":["elemento1", "elemento2", "elemento3"]})
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+    return render(request,"Productos.html")
 
 def login(request):
-    doc_externo =open("static/login.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context()
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+    return render(request,"login.html")
 
 def Seguimiento(request):
-    doc_externo =open("static/Seguimiento.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context()
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+    return render(request,"Seguimiento.html")
 
-def Register(request):
+def Register(request):   
     doc_externo =open("static/Register.html")
-    plt = Template(doc_externo.read())
+    plt = Template(doc_externo.read())         ### esto es lo mismo de arriba pero con mas texto
     doc_externo.close()
     ctx = Context()
     documento = plt.render(ctx)
