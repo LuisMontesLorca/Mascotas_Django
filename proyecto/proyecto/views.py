@@ -30,4 +30,4 @@ def resultado(request):
     ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
     llamadabd = Productos.objects.filter(nombre_incontains = "pelota")
     contexto = {'datos':llamadabd,}
-    return render(request,"resultado.html", contexto)
+    return render(request,"static/resultado.html", contexto)
