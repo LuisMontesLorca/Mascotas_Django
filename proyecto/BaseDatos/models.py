@@ -8,5 +8,5 @@ class Productos(models.Model):                       ### Productos es el nombre 
     descripcion =models.CharField(max_length=30)   ### creando dato varchar
     disponible = models.BooleanField()    ###  creando booleano
     fechaIncorporacion = models.DateField()   ### CREANDO DATO FECHA
-    correoProveedor = models.EmailField()   #### CREANDO DATO CORREO 
+    CORREOpORVEEDOR = models.EmailField()   #### CREANDO DATO CORREO 
     
