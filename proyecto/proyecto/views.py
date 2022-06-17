@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.shortcuts import render
+from BaseDatos.models import Productos
 
 def inicio(request):
     return render(request,"index.html")
@@ -25,3 +26,8 @@ def Register(request):
     documento = plt.render(ctx)
     return HttpResponse(documento)
 
+def resultado(request):
+    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
+    llamadabd = Productos.objects.filter(nombre_incontains = "pelota")
+    contexto = {'datos':llamadabd,}
+    return render(request,"resultado.html", contexto)
