@@ -2,6 +2,10 @@ from django.http import HttpResponse
 from django.template import Template, Context
 from django.shortcuts import render
 from BaseDatos.models import Productos
+from BaseDatos.models import Productos2
+from BaseDatos.models import Boleta
+from BaseDatos.models import Vendedor
+
 
 def inicio(request):
     return render(request,"index.html")
@@ -28,6 +32,24 @@ def Register(request):
 
 def resultado(request):
     ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
-    llamadabd = Productos.objects.filter(nombre__icontains="pelota")
+    llamadabd = Productos2.objects.filter(nombre__icontains="pelota")
     contexto = {'datos':llamadabd,}
+    return render(request,"resultado.html", contexto)
+
+def resultado(request):
+    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
+    llamadabd = Productos2.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
+    contexto = {'datos':llamadabd,}
+    return render(request,"resultado.html", contexto)
+
+def boleta(request):
+    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
+    llamadabd = Boleta.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
+    contexto = {'datos':llamadabd,}
+    return render(request,"resultado.html", contexto)
+
+def vendedor(request):
+    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
+    mensaje = Vendedor.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
+    contexto = {'datos':mensaje,}
     return render(request,"resultado.html", contexto)
