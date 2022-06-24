@@ -31,25 +31,23 @@ def Register(request):
     return HttpResponse(documento)
 
 def resultado(request):
-    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
-    llamadabd = Productos2.objects.filter(nombre__icontains="pelota")
-    contexto = {'datos':llamadabd,}
-    return render(request,"resultado.html", contexto)
-
-def resultado(request):
-    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
-    llamadabd = Productos2.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
-    contexto = {'datos':llamadabd,}
+    productos = Productos2.objects.all #( nombre2__icontains="LIVING WORLD NIDO DE BAMBU", )
+    contexto = {'datos':productos,}
     return render(request,"resultado.html", contexto)
 
 def boleta(request):
-    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
-    llamadabd = Boleta.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
-    contexto = {'datos':llamadabd,}
-    return render(request,"resultado.html", contexto)
+    productos = Boleta.objects.filter(vendedor__icontains="vendedor 1")
+    contexto = {'datos':productos,}
+    return render(request,"resultado2.html", contexto)
 
 def vendedor(request):
-    ##palabra = f'se ha logueado el usuario {request.GET["email"]}'
-    mensaje = Vendedor.objects.filter(nombre2__icontains="LIVING WORLD NIDO DE BAMBU")
-    contexto = {'datos':mensaje,}
-    return render(request,"resultado.html", contexto)
+    productos = Vendedor.objects.filter(nombreVendedor__icontains="vendedor 1")
+    contexto = {'datos':productos,}
+    return render(request,"resultado3.html", contexto)
+
+def usuarioLogueado(request):
+    correo = f'se ha logueado el usuario {request.GET["email"]}'
+    contraseña = f'se ha logueado el usuario {request.GET["contraseña"]}'
+    contexto = {'datos':correo,}
+    contexto2 = {'datos':contraseña,}
+    return render(request,"usuario_logueado.html", contexto)

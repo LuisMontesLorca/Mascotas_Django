@@ -26,6 +26,9 @@ urlpatterns = [
     path('login/',views.login, name= "Login"),
     path('register/',views.Register, name= "Register"),
     path('seguimiento/',views.Seguimiento, name= "Seguimiento"),
-    path('resultado/',views.resultado, name= "Resultado")
+    path('resultado/',views.resultado, name= "Resultado"),
+    path('resultado2/',views.boleta, name= "Boleta"),
+    path('resultado3/',views.vendedor, name= "Vendedor"),
+    path('usuarioLogueado/',views.usuarioLogueado, name= "usuarioLogueado"),
 ]
 
