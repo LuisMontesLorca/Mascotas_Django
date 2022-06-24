@@ -38,7 +38,8 @@
                 </ul>             
     </div>
   </nav>
-
+  <div class="container">
+  <div id="productos" class="row">
   {% for elemento in datos%}
 
     <!--{% if elemento.disponible2 %}
@@ -47,8 +48,7 @@
     <h1>  <img src= "{{elemento.correoProveedor}}" class=" height: 100 " alt="foto"> </h1>
     <h3> {{elemento.nombre2}} </h3>
     {% endif %} -->
-    <div class="container">
-    <div id="productos" class="row">
+    <div class="col-4">
     <div class="card" style="width: 18rem;">
       <img src= "{{elemento.correoProveedor}}" class="card-img-top" alt="foto">
       <div class="card-body">
@@ -57,10 +57,10 @@
         <a href="#" class="btn btn-primary" onclick="apretarboton('{{elemento.nombre2}}','{{elemento.precio2}}')"> Añadir al carro</a>
       </div>
     </div>
-  </div> 
-</div>
+  </div>
   {% endfor %}
-
+</div> 
+</div>
 
   
 </body>
